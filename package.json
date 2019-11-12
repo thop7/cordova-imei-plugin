@@ -1,0 +1,32 @@
+{
+  "name": "cordova-imei-plugin",
+  "version": "1.0.0",
+  "description": "Get The Real IMEI Number on Device",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "cordova-imei-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thop7/cordova-imei-plugin"
+  },
+  "keywords": [
+    "cordova",
+    "imei",
+    "cordova-android"
+  ],
+  "author": "Thop",
+  "bugs": {
+    "url": "https://github.com/thop7/cordova-imei-plugin/issues"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.5.0"
+    }
+  ],
+  "homepage": "https://github.com/thop7/cordova-imei-plugin#readme"
+}
