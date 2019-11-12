@@ -1,4 +1,4 @@
-package com.joandilee;
+package it.thop;
 
 import android.Manifest;
 import org.apache.cordova.CordovaPlugin;
