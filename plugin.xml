@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.joandilee.imeiplugin"
+        id="it.thop.imeiplugin"
         version="0.1">
 
     <engines>
         <engine name="cordova" version=">=3.5.0" />
     </engines>
 
-    <name>IMEI Plugin</name>
+    <name>IMEI Cordova Plugin</name>
     <description>Get The Real IMEI Number on Device</description>
-    <author>Joandi</author>
+    <author>Thop</author>
     <license>Apache 2.0</license>
     <keywords>cordova,imei</keywords>
-    <repo>https://github.com/zho/phonegap-imeiplugin.git</repo>
-    <issue>https://github.com/zho/phonegap-imeiplugin/issues</issue>
+    <repo>https://github.com/thop7/cordova-imei-plugin.git</repo>
+    <issue>https://github.com/thop7/cordova-imei-plugin/issues</issue>
 
     <js-module src="www/imeiplugin.js" name="imeiplugin">
         <clobbers target="imeiplugin" />
@@ -24,7 +24,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="imeiplugin" >
-                <param name="android-package" value="com.joandilee.imeiplugin"/>
+                <param name="android-package" value="it.thop.imeiplugin"/>
             </feature>
         </config-file>
 
@@ -32,6 +32,6 @@
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
         </config-file>
 
-        <source-file src="src/android/imeiplugin.java" target-dir="src/com/joandilee/imeiplugin" />
+        <source-file src="src/android/imeiplugin.java" target-dir="src/it/thop/imeiplugin" />
     </platform>
 </plugin>
