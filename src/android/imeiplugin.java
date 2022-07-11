@@ -1,6 +1,7 @@
 package it.thop;
 
 import android.Manifest;
+import android.os.Build;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PermissionHelper;
@@ -33,7 +34,11 @@ public class imeiplugin extends CordovaPlugin {
     public void DeviceImeiNumber(CallbackContext callbackContext) {
         Context context = this.cordova.getActivity().getApplicationContext();
         TelephonyManager tManager = (TelephonyManager)cordova.getActivity().getSystemService(context.TELEPHONY_SERVICE);
-        callbackContext.success(tManager.getDeviceId());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            callbackContext.success(tManager.getImei());
+        } else {
+            callbackContext.success(tManager.getDeviceId());
+        }
     }
 
     private void getImei(String message, CallbackContext callbackContext) {
@@ -51,5 +56,5 @@ public class imeiplugin extends CordovaPlugin {
         if(requestCode == 0) {
             this.DeviceImeiNumber(mCallbackContext);
         }
-    } 
-} 
+    }
+}
