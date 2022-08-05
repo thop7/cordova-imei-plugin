@@ -2,6 +2,7 @@ package it.thop;
 
 import android.Manifest;
 import android.os.Build;
+import android.content.pm.PackageManager;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PermissionHelper;
@@ -54,7 +55,9 @@ public class imeiplugin extends CordovaPlugin {
     {
 
         if(requestCode == 0) {
+          if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             this.DeviceImeiNumber(mCallbackContext);
+          }
         }
     }
 }
