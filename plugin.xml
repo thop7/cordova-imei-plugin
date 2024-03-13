@@ -30,6 +30,7 @@
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         </config-file>
 
         <source-file src="src/android/imeiplugin.java" target-dir="src/it/thop/imeiplugin" />
